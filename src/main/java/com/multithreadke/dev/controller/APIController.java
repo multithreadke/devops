@@ -13,7 +13,7 @@ import java.util.Map;
 @RequestMapping(value = "/api/v1")
 public class APIController {
 
-    @GetMapping(value = "status")
+    @GetMapping(value = "/status")
     public ResponseEntity<?> queryStatus()
     {
         Map<String, String> map = new HashMap<>();
