@@ -1,5 +1,6 @@
 package com.multithreadke.dev.controller;
 
+import com.multithreadke.dev.model.Result;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ public class APIController {
         map.put("error", "False");
         map.put("statusCode", "200");
         map.put("statusMessage", "Success");
-        return new ResponseEntity<>(map, HttpStatus.OK);
+        return new ResponseEntity<>(new Result(true, "200", "Success"), HttpStatus.OK);
     }
 
 }
